@@ -85,7 +85,7 @@
     const imgCard = document.createElement("img"); // creo una imagen
     imgCard.src = `assets/cards/${card}.webp`; // le doy el src
     imgCard.classList.add("card"); // le aplico la clase
-    imgCard.alt = `image ${card}`;
+    // imgCard.alt = `image ${card}`;
     displayCards[turn].append(imgCard); // inserto la img en el HTML
   }
 
@@ -113,7 +113,7 @@
     do {
       const card = getCard(); // llamo la función y almaceno la carta en memoria
       computerPoints = pointsAcumulator(card, playersPoints.length - 1); // Calculo los puntos de la computadora, su index será siempre el último del array contenedor
-      createCards(card,playersPoints.length - 1); // invoco la función que crea las cartas pasando como argumento la carta y el jugador, en este caso la computadora
+      createCards(card, playersPoints.length - 1); // invoco la función que crea las cartas pasando como argumento la carta y el jugador, en este caso la computadora
     } while ((computerPoints < minimumPoints) && (minimumPoints <= 21));
     determineWinner() // al terminar el turno de la computadora invoco la función que determina el ganador del juego
   };
