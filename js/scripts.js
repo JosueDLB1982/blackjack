@@ -124,22 +124,12 @@
     const playerPoints = pointsAcumulator(card, 0) // creo la variable que contendré los puntos del jugador y le asigno el resultado de la funcion que calcula los puntos. Le paso como argumento la carta y la posición del jugadorm en este caso index 0 por ser el primer jugador
     createCards(card, 0)
 
-    if (playerPoints > 21 || playerPoints === 21) {
+    // lógica para turno del jugador
+    if (playerPoints >= 21) {
       btnAskCard.disabled = true;
       btnStop.disabled = true;
       computerTurn(playerPoints);
     }
-    
-    // lógica para turno del jugador
-    // if (playerPoints > 21) {
-    //   btnAskCard.disabled = true; // si el jugador se pasa de 21 pierde
-    //   btnStop.disabled = true; // ergo se desabilitan los botones de pedir carta y detener
-    //   computerTurn(playerPoints);
-    // } else if (playerPoints === 21) {
-    //   btnAskCard.disabled = true; // si el jugador logra 21 tiene la mejor puntuación,
-    //   btnStop.disabled = true; // ergo se desabilitan de igual manera los botones
-    //   computerTurn(playerPoints); // puesto que el jugador alcanzó 21, invocamos la función de turno de la computadora
-    // }
   });
 
   btnStop.addEventListener("click", () => { // Botón para detener turno del jugador
