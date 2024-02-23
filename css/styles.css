@@ -14,16 +14,25 @@ html, body {
     min-width: 352px;
 }
 
+header a {
+    color: var(--color);
+    font-size: small;
+}
+
 h1 {
     font-size: larger;
 }
 
-.title {
+.header {
     text-align: center;
     background-color: var(--bg-header);
-    padding: 20px;
-    font-size: 25px;
+    padding: 15px;
+    width: 100%;
+}
+
+.title {
     text-transform: uppercase;
+    font-size: x-large;
 }
 
 .buttons {
