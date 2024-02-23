@@ -89,7 +89,7 @@
     displayCards[turn].append(imgCard); // inserto la img en el HTML
   }
 
-  // Función para determinar jugador
+  // Función para determinar ganador
   const determineWinner = () => {
     const [minimumPoints, computerPoints] = playersPoints // usamos desestructuración de arrays para extraer los valores del array playersPoints 
     setTimeout(() => {
