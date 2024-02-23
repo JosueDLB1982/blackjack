@@ -83,7 +83,7 @@
   // Función para crear las imagenes de las cartas
   const createCards = (card, turn) => {
     const imgCard = document.createElement("img"); // creo una imagen
-    imgCard.src = `../assets/cards/${card}.webp`; // le doy el src
+    imgCard.src = `assets/cards/${card}.webp`; // le doy el src
     imgCard.classList.add("card"); // le aplico la clase
     imgCard.alt = `image ${card}`;
     displayCards[turn].append(imgCard); // inserto la img en el HTML
